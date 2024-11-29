@@ -16,7 +16,7 @@ The MotivationApp is designed to help you stay focused, achieve your goals, and 
 ## Installation
 
 - **Clone the Repository**:
-  git clone https://github.com/TuringCollegeSubmissions/mbieli-WD.1.4.4.git
+  git clone https://github.com/Mikolonija/motivation_app.git
 
 ## Setting Up Environment Variables
 
