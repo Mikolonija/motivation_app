@@ -1,4 +1,4 @@
-# MotivationApp
+# Motivation App
 
 The MotivationApp is designed to help you stay focused, achieve your goals, and maintain high levels of motivation. Whether you're working on Everyday Essentials, Growth & Learning, or staying on top of your Health & Fitness routine, the app provides the tools and support you need to stay on track.
 
