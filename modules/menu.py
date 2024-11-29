@@ -4,7 +4,7 @@ from modules.profile_managment.view_profile import profile_viewing
 from modules.items_managment.buy_item import buy_item
 from modules.items_managment.view_items import items_viewing
 from modules.task_management.manage_tasks import manage_tasks
-from modules.submit_feedback import send_feedback
+from modules.submit_feedback import submit_feedback
 from modules.task_management.view_tasks import tasks_viewing
 from utils import descriptions
 from utils.enums import menu_enm, task_enm
@@ -36,7 +36,7 @@ def menu_selection(selection: str) -> None:
             buy_item()
         case menu_enm.MENU_OPTION.SUBMIT_FEEDBACK.value:
             os.system("cls")
-            send_feedback()
+            submit_feedback()
         case menu_enm.MENU_OPTION.EXIT.value:
             sys.exit()
         case _:

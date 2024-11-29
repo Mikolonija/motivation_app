@@ -23,7 +23,7 @@ class FeedbackHandler:
     def confirm_and_send(self) -> None:
         confirmation: str = self.confirm_send_decision()
         self.process_confirmation(confirmation)
-        send_feedback()
+        submit_feedback()
 
     def confirm_send_decision(self) -> str:
         while True:
@@ -35,7 +35,7 @@ class FeedbackHandler:
         if confirmation == "yes":
             self.send_message()
         else:
-            msg_output("Feedback email was not sent.")
+            msg_output("Feedback was not sent.")
 
     def send_message(self) -> None:
         try:
@@ -49,12 +49,12 @@ class FeedbackHandler:
                 server.starttls()
                 server.login(os.getenv("GMAIL_USER"), os.getenv("GMAIL_PASSWORD"))
                 server.sendmail(os.getenv("GMAIL_USER"), os.getenv("GMAIL_USER"), msg.as_string())
-            msg_output("Feedback email sent successfully.")
+            msg_output("Your feedback has been sent successfully.")
         except Exception as e:
             msg_output(f"Error sending email: {e}")
 
 
-def send_feedback() -> None:
+def submit_feedback() -> None:
     feedback_handler: str = FeedbackHandler.create_feedback_message()
     if feedback_handler:
         feedback_handler.confirm_and_send()
