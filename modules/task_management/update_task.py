@@ -100,7 +100,7 @@ class UpdateTask:
         if confirm.lower() == "yes" and self.task_mode_type == task_enm.MODE_TYPE.MARK_AS_COMPLETED.value:
             os.system("cls")
             self.task_file_handler.update_task_in_file(task, task_enm.ACTION_TYPE.UPDATE_STATUS.value)
-            self.profile_file_handler.update_profile_level_and_coins(task)
+            self.profile_file_handler.update_profile_category_level_and_coins_in_file(task)
         elif confirm.lower() == "yes" and self.task_mode_type == task_enm.MODE_TYPE.UPDATE_DESCRIPTION.value:
             os.system("cls")
             self.task_file_handler.update_task_in_file(task, task_enm.ACTION_TYPE.UPDATE_DESCRIPTION.value)
