@@ -2,7 +2,7 @@ import os
 from modules.file_operations.profile_file_handler import ProfileFileHandler
 from utils import config, descriptions
 from utils.enums import profile_enm
-from utils.helpers import build_profile, get_non_empty_input, get_non_empty_input_with_default, msg_output
+from utils.helpers import get_non_empty_input, get_non_empty_input_with_default, msg_output
 from utils.types import Profile
 
 
@@ -27,7 +27,7 @@ class ManageProfile:
             print("\nYou don't have a profile. Please use the Profile Creation Wizard to create a profile!")
             first_name: str = get_non_empty_input(f"\nPlease enter your first name: ", "Error: First name cannot be empty. Please try again.")
             last_name: str = get_non_empty_input(f"Please enter your last name: ", "Error: Last name cannot be empty. Please try again.")
-            profile: list[Profile] = build_profile(first_name, last_name)
+            profile: list[Profile] = self.profile_file_handler.build_profile(first_name, last_name)
             self.profile_file_handler.save_in_file(profile)
             os.system("cls")
             msg_output(f"Profile was successfully created at file {config.FILE_PROFILE_PATH}")

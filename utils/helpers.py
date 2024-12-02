@@ -57,21 +57,6 @@ def get_task_status_name(type: str) -> str:
     return status_map.get(type, "Unknown Status")
 
 
-def build_profile(
-    first_name: str, last_name: str, physical: int = 100, smart: int = 100, lifestyle: int = 100, coins: int = 0, items: list = []
-) -> list[Profile]:
-    new_profile: Profile = {
-        profile_enm.FIELD.FIRST_NAME.value: first_name,
-        profile_enm.FIELD.LAST_NAME.value: last_name,
-        profile_enm.FIELD.PHYSICAL.value: physical,
-        profile_enm.FIELD.SMART.value: smart,
-        profile_enm.FIELD.LIFESTYLE.value: lifestyle,
-        profile_enm.FIELD.COINS.value: coins,
-        profile_enm.FIELD.ITEMS.value: items,
-    }
-    return [new_profile]
-
-
 def get_points_by_task_difucalyti(task: Task) -> int:
     match task[task_enm.FIELD.DIFFICULTY.value]:
         case task_enm.DIFFICULTY.EASY.value:

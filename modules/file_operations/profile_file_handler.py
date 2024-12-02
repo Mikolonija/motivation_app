@@ -1,7 +1,7 @@
 import csv, os
 from utils import config
 from utils.enums import profile_enm, task_enm
-from utils.helpers import build_profile, msg_output
+from utils.helpers import msg_output
 from utils.types import Profile, Task
 
 
@@ -27,10 +27,24 @@ class ProfileFileHandler:
     def get_fieldnames(self) -> list:
         return [field.value for field in profile_enm.FIELD]
 
+    def build_profile(
+        self, first_name: str, last_name: str, physical: int = 100, smart: int = 100, lifestyle: int = 100, coins: int = 0, items: list = []
+    ) -> list[Profile]:
+        new_profile: Profile = {
+            profile_enm.FIELD.FIRST_NAME.value: first_name,
+            profile_enm.FIELD.LAST_NAME.value: last_name,
+            profile_enm.FIELD.PHYSICAL.value: physical,
+            profile_enm.FIELD.SMART.value: smart,
+            profile_enm.FIELD.LIFESTYLE.value: lifestyle,
+            profile_enm.FIELD.COINS.value: coins,
+            profile_enm.FIELD.ITEMS.value: items,
+        }
+        return [new_profile]
+
     def check_does_profile_data_exist(self) -> None:
         current_profile: Profile = self.get_profile_info()
         if not current_profile:
-            new_profile = build_profile("First name", "Last name")
+            new_profile = self.build_profile("First name", "Last name")
             self.save_in_file(new_profile)
 
     def update_profile_category_points_and_coins_in_file(self, task: Task, points: int, coins: int) -> None:
