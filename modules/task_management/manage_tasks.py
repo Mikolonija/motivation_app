@@ -30,7 +30,7 @@ class ManageTasks:
                 continue
             return cls(choice)
 
-    def run_mode(self):
+    def run_mode(self) -> None:
         if self.current_task_mode == task_enm.MODE_TYPE.ADD.value:
             os.system("cls")
             add_task()

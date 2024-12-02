@@ -39,7 +39,7 @@ def get_task_difficulty_name(type: str) -> str:
     return difficulty_map.get(type, "Unknown Difficulty")
 
 
-def get_task_category_name(type: str):
+def get_task_category_name(type: str) -> str:
     category_map = {
         task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value: "Everyday Essentials",
         task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value: "Growth & Learning",
