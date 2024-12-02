@@ -3,9 +3,9 @@ from modules.file_operations.profile_file_handler import ProfileFileHandler
 from modules.file_operations.task_file_handler import TaskFileHandler
 from utils.enums import menu_enm, profile_enm, task_enm
 from utils.helpers import (
-    count_points,
+    count_level_and_coins,
     get_non_empty_input,
-    get_points_by_difucalyti,
+    get_points_by_task_difucalyti,
     get_task_category_name,
     get_task_difficulty_name,
     get_task_status_name,
@@ -110,9 +110,9 @@ class UpdateTask:
         if confirm.lower() == "yes" and self.task_mode_type == task_enm.MODE_TYPE.MARK_AS_COMPLETED.value:
             os.system("cls")
             self.task_file_handler.update_task_in_file(task, task_enm.ACTION_TYPE.UPDATE_STATUS.value)
-            points_by_difucalyti = get_points_by_difucalyti(task)
-            points, coins = count_points(task, points_by_difucalyti)
-            self.profile_file_handler.update_profile_category_level_and_coins_in_file(task, points, coins)
+            points_by_difucalyti = get_points_by_task_difucalyti(task)
+            level, coins = count_level_and_coins(task, points_by_difucalyti)
+            self.profile_file_handler.update_profile_category_level_and_coins_in_file(task, level, coins)
         elif confirm.lower() == "yes" and self.task_mode_type == task_enm.MODE_TYPE.UPDATE_DESCRIPTION.value:
             os.system("cls")
             self.task_file_handler.update_task_in_file(task, task_enm.ACTION_TYPE.UPDATE_DESCRIPTION.value)

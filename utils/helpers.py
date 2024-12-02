@@ -72,23 +72,7 @@ def build_profile(
     return [new_profile]
 
 
-def count_points(task: Task, points_by_difucalyti: int) -> list[int] | None:
-    match task[task_enm.FIELD.CATEGORY.value]:
-        case task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value:
-            points = points_by_difucalyti + profile_enm.POINTS.LIFESTYLE.value
-            coins = points_by_difucalyti + profile_enm.POINTS.COINS.value
-            return [points, coins]
-        case task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value:
-            points = points_by_difucalyti + profile_enm.POINTS.SMART.value
-            coins = points_by_difucalyti + profile_enm.POINTS.COINS.value
-            return [points, coins]
-        case task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value:
-            points = points_by_difucalyti + profile_enm.POINTS.PHYSICAL.value
-            coins = points_by_difucalyti + profile_enm.POINTS.COINS.value
-            return [points, coins]
-
-
-def get_points_by_difucalyti(task: Task) -> int:
+def get_points_by_task_difucalyti(task: Task) -> int:
     match task[task_enm.FIELD.DIFFICULTY.value]:
         case task_enm.DIFFICULTY.EASY.value:
             return profile_enm.POINTS_BY_DIFUCALYTI.EASY.value
@@ -96,3 +80,17 @@ def get_points_by_difucalyti(task: Task) -> int:
             return profile_enm.POINTS_BY_DIFUCALYTI.MEDIUM.value
         case task_enm.DIFFICULTY.HARD.value:
             return profile_enm.POINTS_BY_DIFUCALYTI.HARD.value
+
+
+def count_level_and_coins(task: Task, points_by_difucalyti: int) -> list[int] | None:
+    coins = points_by_difucalyti + profile_enm.POINTS.COINS.value
+    match task[task_enm.FIELD.CATEGORY.value]:
+        case task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value:
+            level = points_by_difucalyti + profile_enm.POINTS.LIFESTYLE.value
+            return [level, coins]
+        case task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value:
+            level = points_by_difucalyti + profile_enm.POINTS.SMART.value
+            return [level, coins]
+        case task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value:
+            level = points_by_difucalyti + profile_enm.POINTS.PHYSICAL.value
+            return [level, coins]
