@@ -37,9 +37,18 @@ MODE_TYPE = Enum(
 POINTS = Enum(
     "POINTS",
     [
-        ("COINS", 25),
-        ("PHYSICAL", 15),
-        ("LIFESTYLE", 15),
-        ("SMART", 15),
+        ("COINS", 20),
+        ("PHYSICAL", 10),
+        ("LIFESTYLE", 10),
+        ("SMART", 10),
+    ],
+)
+
+POINTS_BY_DIFUCALYTI = Enum(
+    "POINTS_BY_DIFUCALYTI",
+    [
+        ("EASY", 5),
+        ("MEDIUM", 10),
+        ("HARD", 15),
     ],
 )

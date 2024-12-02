@@ -28,6 +28,16 @@ FIELD = Enum(
         ("DEADLINE", "DEADLINE"),
         ("STATUS", "STATUS"),
         ("CATEGORY", "CATEGORY"),
+        ("DIFFICULTY", "DIFFICULTY"),
+    ],
+)
+
+DIFFICULTY = Enum(
+    "DIFFICULTY",
+    [
+        ("EASY", "1"),
+        ("MEDIUM", "2"),
+        ("HARD", "3"),
     ],
 )
 

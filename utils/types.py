@@ -7,6 +7,7 @@ class Task(TypedDict):
     DEADLINE: str
     STATUS: str
     CATEGORY: str
+    DIFFICULTY: str
 
 
 class Profile(TypedDict):

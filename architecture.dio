@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="2u_pkWldPYGET0MiNu1v" name="task_table">
-        <mxGraphModel dx="1107" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -211,13 +211,34 @@
                     <mxGeometry x="880" y="280" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="yLwwEw2vR53jxKDzMqly-30" value="Table&amp;nbsp;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="120" width="960" height="40" as="geometry"/>
+                    <mxGeometry x="40" y="120" width="1180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;span style=&quot;text-align: left;&quot;&gt;Difficulty&lt;/span&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="200" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Easy" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Hard" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Medium" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="1" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="280" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="2" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="360" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="3" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="440" width="40" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="00VdZyceGutYEs7GiR91" name="profile_table">
-        <mxGraphModel dx="1107" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -263,22 +284,22 @@
                 <mxCell id="QGGA7lPWlOZipwo0ywvL-8" value="Number" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="280" width="200" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="QGGA7lPWlOZipwo0ywvL-9" value="IF finished task get 25 coins" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="QGGA7lPWlOZipwo0ywvL-9" value="IF finished task get 20&amp;nbsp; coins + difficulty points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1000" y="330" width="200" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="QGGA7lPWlOZipwo0ywvL-10" value="IF finished Health &amp;amp; Fitness&amp;nbsp;type task get +15 points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="QGGA7lPWlOZipwo0ywvL-10" value="IF finished Health &amp;amp; Fitness&amp;nbsp;type task get +10 points + difficulty points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="330" width="200" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="6r_1Jkb7a535yck844j9-1" value="100 points represent 1lv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="280" y="380" width="200" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="6r_1Jkb7a535yck844j9-2" value="IF finished Growth &amp;amp; Learning&amp;nbsp;type task get +15 points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="6r_1Jkb7a535yck844j9-2" value="IF finished Growth &amp;amp; Learning&amp;nbsp;type task get +10 points + difficulty points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="330" width="200" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="6r_1Jkb7a535yck844j9-3" value="100 points represent 1lv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="380" width="200" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="TYKKYt_whQLlizpmG4Si-1" value="IF finished Everyday Essentails&amp;nbsp;type task get +15 points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="TYKKYt_whQLlizpmG4Si-1" value="IF finished Everyday Essentails&amp;nbsp;type task get +10 points + difficulty points" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="760" y="330" width="200" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="63u_IfI6S-0oMnX7cGZ1-1" value="100 points represet 1lv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -294,7 +315,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="hG2F07Et_ILe1HVBB6uV" name="items_table">
-        <mxGraphModel dx="1107" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -332,7 +353,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="mE5XGSduQ6b0PAP6TRTr" name="menu_process">
-        <mxGraphModel dx="2013" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -541,7 +562,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="2birHwayTb4Yfo-oSkIf" name="task_mode_process">
-        <mxGraphModel dx="3545" dy="1837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2738" dy="1564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -880,17 +901,17 @@
                 <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-1" value="Show message" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="-480" y="1040" width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="xqu3MQ0zIIOYKC587HZ6-3" value="Create task" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="xqu3MQ0zIIOYKC587HZ6-3" value="Create task difficulty" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="760" y="680" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-15" value="Update in file" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="760" y="760" width="160" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-14" value="Save in file data/tasks.csv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="760" y="840" width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-17" value="Show message" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-14" value="Save in file data/tasks.csv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="760" y="920" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="TP_6Cpgmd7_1Q8uNgnBU-17" value="Show message" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="1000" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="IbLFZ7m1ClpYThU35bmK-2" value="Write back" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="930" y="360" width="60" height="40" as="geometry"/>
@@ -1017,11 +1038,14 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="y0kC3TdBwZJ5nUHzN0Dl-1" value="Create task" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="760" width="160" height="40" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="JCFhm5gkJ5xcxzqeTgrQ" name="complete_task_process">
-        <mxGraphModel dx="4013" dy="1263" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1888" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1117,10 +1141,10 @@
                 <mxCell id="nKAqmI3rRFm0VTD6EwAD-3" value="VF" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="680" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="nKAqmI3rRFm0VTD6EwAD-4" value="Add coints +25" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="nKAqmI3rRFm0VTD6EwAD-4" value="Add coints and points" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="905" y="680" width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="nKAqmI3rRFm0VTD6EwAD-5" value="Update progress&lt;br&gt;+15" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="nKAqmI3rRFm0VTD6EwAD-5" value="Update progress&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="905" y="730" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="3ljJZM8q2Ix8s_a7AC4Y-1" value="Change task status to Compleated" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -1196,7 +1220,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="eKtjAZeV5gM4M13N1kfS" name="view_process ">
-        <mxGraphModel dx="1107" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1266,7 +1290,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="niMlu1e2StMRn88NNDNU" name="profile_mode_process">
-        <mxGraphModel dx="2234" dy="1653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1732" dy="1494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1562,7 +1586,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="I37WCL1az0cRV73ZNOtP" name="buy_items_process">
-        <mxGraphModel dx="1957" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1732" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1735,7 +1759,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="yfXp8cYvVYpNekSQAn2o" name="send_feedback_procsess">
-        <mxGraphModel dx="1107" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

@@ -1,7 +1,7 @@
 import os
 from modules.file_operations.task_file_handler import TaskFileHandler
 from utils.enums import menu_enm, task_enm
-from utils.helpers import get_non_empty_input, get_task_category_name, get_task_status_name, msg_output
+from utils.helpers import get_non_empty_input, get_task_category_name, get_task_difficulty_name, get_task_status_name, msg_output
 from utils.types import Task
 
 
@@ -57,6 +57,7 @@ class RemoveTask:
         print(f"DEADLINE: {task[task_enm.FIELD.DEADLINE.value]}")
         print(f"STATUS: {get_task_status_name(task[task_enm.FIELD.STATUS.value])}")
         print(f"CATEGORY: {get_task_category_name(task[task_enm.FIELD.CATEGORY.value])}")
+        print(f"DIFUCALYTI: {get_task_difficulty_name(task[task_enm.FIELD.DIFFICULTY.value])}")
 
     def remove(self, task: Task) -> None:
         confirm: str = get_non_empty_input(f"\nDo you want to remove task? (yes/no): ", "Error: Text cannot be empty")

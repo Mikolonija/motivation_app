@@ -41,7 +41,8 @@ class AddTask:
             f"Enter the {task_enm.CATEGORY_TYPE(self.task_category).name} task description: ", "Error: Task description cannot be empty"
         )
         task_deadline: str = self.create_task_deadline()
-        self.create_task(task_description, task_deadline)
+        task_difficulty: str = self.create_task_difficulty()
+        self.create_task(task_description, task_deadline, task_difficulty)
         add_task()
 
     def create_task_deadline(self) -> str:
@@ -60,18 +61,37 @@ class AddTask:
             except ValueError:
                 msg_output("Error: Invalid date format. Please enter the date in YYYY-MM-DD format.")
 
-    def create_task(self, task_description: str, task_deadline: str) -> None:
-        new_task: Task = self.build_task(task_description, task_deadline)
+    def create_task_difficulty(self) -> str:
+        print_task_difucalyti_choices()
+        while True:
+            choice: str = get_non_empty_input(
+                f"Enter the task difficulty (1-{len(task_enm.DIFFICULTY)}): ",
+                "Error: task difficulty type cannot be empty ",
+            )
+            if choice not in [
+                task_enm.DIFFICULTY.EASY.value,
+                task_enm.DIFFICULTY.MEDIUM.value,
+                task_enm.DIFFICULTY.HARD.value,
+            ]:
+                msg_output(
+                    f"Error: Please enter a valid choice. Use {task_enm.DIFFICULTY.EASY.value} to create an Easy task, {task_enm.DIFFICULTY.MEDIUM.value} to create a Medium task, or {task_enm.DIFFICULTY.HARD.value} to create a Hard task. Please try again."
+                )
+                continue
+            return choice
+
+    def create_task(self, task_description: str, task_deadline: str, task_difficulty: str) -> None:
+        new_task: Task = self.build_task(task_description, task_deadline, task_difficulty)
         self.add_task_to_file(new_task)
         self.print_success_message()
 
-    def build_task(self, task_description: str, task_deadline: str) -> Task:
+    def build_task(self, task_description: str, task_deadline: str, task_difficulty: str) -> Task:
         new_task: Task = {
             task_enm.FIELD.ID.value: self.id,
             task_enm.FIELD.DESCRIPTION.value: task_description,
             task_enm.FIELD.DEADLINE.value: task_deadline,
             task_enm.FIELD.STATUS.value: task_enm.STATUS.IN_PROGRESS.value,
             task_enm.FIELD.CATEGORY.value: self.task_category,
+            task_enm.FIELD.DIFFICULTY.value: task_difficulty,
         }
         return new_task
 
@@ -90,6 +110,12 @@ def print_task_type_category_choices() -> None:
     print(f"Attention: To go back to task mode selection, type '{menu_enm.MENU_ACTION.BACK.name.lower()}'.")
     print(f"\nSelect a task category(1-{len(task_enm.CATEGORY_TYPE)}) to create a task:")
     for key, value in descriptions.task_category_type_descriptions.items():
+        print(f"{key}: {value}")
+
+
+def print_task_difucalyti_choices() -> None:
+    print(f"\nSelect a task difucalyti level (1-{len(task_enm.DIFFICULTY)}) to create a task:")
+    for key, value in descriptions.task_difficulty_descriptions.items():
         print(f"{key}: {value}")
 
 

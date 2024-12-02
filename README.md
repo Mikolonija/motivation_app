@@ -169,6 +169,10 @@ pytest test_helpers.py
 
    ![step4](images/add_task/step4.png)
 
+6. Set a task difficulty (1-3).
+
+   ![step5](images/add_task/step5.png)
+
 #### **Mark task as completed**
 
 1. Select option "Manage tasks".

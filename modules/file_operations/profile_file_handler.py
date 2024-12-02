@@ -33,40 +33,40 @@ class ProfileFileHandler:
             new_profile = build_profile("First name", "Last name")
             self.save_in_file(new_profile)
 
-    def update_profile_category_level_and_coins_in_file(self, task: Task) -> None:
+    def update_profile_category_level_and_coins_in_file(self, task: Task, points: int, coins: int) -> None:
         self.check_does_profile_data_exist()
         match task[task_enm.FIELD.CATEGORY.value]:
             case task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_LIFESTYLE.value)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_LIFESTYLE.value, None, points)
             case task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_SMART.value)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_SMART.value, None, points)
             case task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_PHYSICAL.value)
-        self.update_profile_in_file(profile_enm.ACTION_TYPE.ADD_COINS.value)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_PHYSICAL.value, None, points)
+        self.update_profile_in_file(profile_enm.ACTION_TYPE.ADD_COINS.value, None, coins)
 
-    def update_profile_in_file(self, action_type: str, update_profile: list[Profile] | None = None) -> bool:
+    def update_profile_in_file(self, action_type: str, update_profile: list[Profile] | None = None, total_count: int | None = None) -> bool:
         current_profile: Profile = self.get_profile_info()
         for profile in current_profile:
-            self.update_field(update_profile, profile, action_type)
+            self.update_field(update_profile, profile, action_type, total_count)
             self.save_in_file(current_profile)
             return True
         msg_output("Error: Failed to update the profile field. Please try again.")
         return False
 
-    def update_field(self, update_profile: Profile, profile: Profile, action_type: str) -> None:
+    def update_field(self, update_profile: Profile, profile: Profile, action_type: str, total_count: int) -> None:
         match action_type:
             case profile_enm.ACTION_TYPE.UPDATE_LIFESTYLE.value:
-                profile[profile_enm.FIELD.LIFESTYLE.value] = int(profile[profile_enm.FIELD.LIFESTYLE.value]) + profile_enm.POINTS.LIFESTYLE.value
+                profile[profile_enm.FIELD.LIFESTYLE.value] = int(profile[profile_enm.FIELD.LIFESTYLE.value]) + total_count
                 msg_output(f"Your {profile_enm.FIELD.LIFESTYLE.name} level has been updated.")
             case profile_enm.ACTION_TYPE.UPDATE_SMART.value:
-                profile[profile_enm.FIELD.SMART.value] = int(profile[profile_enm.FIELD.SMART.value]) + profile_enm.POINTS.SMART.value
+                profile[profile_enm.FIELD.SMART.value] = int(profile[profile_enm.FIELD.SMART.value]) + total_count
                 msg_output(f"Your {profile_enm.FIELD.SMART.name} level has been updated.")
             case profile_enm.ACTION_TYPE.UPDATE_PHYSICAL.value:
-                profile[profile_enm.FIELD.PHYSICAL.value] = int(profile[profile_enm.FIELD.PHYSICAL.value]) + profile_enm.POINTS.PHYSICAL.value
+                profile[profile_enm.FIELD.PHYSICAL.value] = int(profile[profile_enm.FIELD.PHYSICAL.value]) + total_count
                 msg_output(f"Your {profile_enm.FIELD.PHYSICAL.name} level has been updated.")
             case profile_enm.ACTION_TYPE.ADD_COINS.value:
-                profile[profile_enm.FIELD.COINS.value] = int(profile[profile_enm.FIELD.COINS.value]) + profile_enm.POINTS.COINS.value
-                msg_output(f"You have received {profile_enm.POINTS.COINS.value} coins.")
+                profile[profile_enm.FIELD.COINS.value] = int(profile[profile_enm.FIELD.COINS.value]) + total_count
+                msg_output(f"You have received {total_count} coins.")
             case profile_enm.ACTION_TYPE.UPDATE_FIRST_NAME.value:
                 profile[profile_enm.FIELD.FIRST_NAME.value] = update_profile[0][profile_enm.FIELD.FIRST_NAME.value]
                 msg_output(f"Profile {profile_enm.FIELD.FIRST_NAME.name} was successfully updated")

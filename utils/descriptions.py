@@ -18,6 +18,12 @@ task_category_type_descriptions: dict = {
     "3": "Health & Fitness (tasks related to physical health, exercise, wellness, etc.)",
 }
 
+task_difficulty_descriptions: dict = {
+    "1": "Easy: Simple tasks that require little effort, like folding laundry or cleaning a small room.",
+    "2": "Medium: Tasks that require some skill and effort, like cooking a meal or organizing a closet.",
+    "3": "Hard: Challenging tasks that need focus and advanced skills, like reading a complex book or designing a website.",
+}
+
 profile_edit_type_descriptions: dict = {
     "1": "Edit your first name",
     "2": "Edit your last name",
