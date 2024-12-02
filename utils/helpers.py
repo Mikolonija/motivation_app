@@ -82,15 +82,15 @@ def get_points_by_task_difucalyti(task: Task) -> int:
             return profile_enm.POINTS_BY_DIFUCALYTI.HARD.value
 
 
-def count_level_and_coins(task: Task, points_by_difucalyti: int) -> list[int] | None:
+def count_points_and_coins(task: Task, points_by_difucalyti: int) -> list[int] | None:
     coins = points_by_difucalyti + profile_enm.POINTS.COINS.value
     match task[task_enm.FIELD.CATEGORY.value]:
         case task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value:
-            level = points_by_difucalyti + profile_enm.POINTS.LIFESTYLE.value
-            return [level, coins]
+            points = points_by_difucalyti + profile_enm.POINTS.LIFESTYLE.value
+            return [points, coins]
         case task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value:
-            level = points_by_difucalyti + profile_enm.POINTS.SMART.value
-            return [level, coins]
+            points = points_by_difucalyti + profile_enm.POINTS.SMART.value
+            return [points, coins]
         case task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value:
-            level = points_by_difucalyti + profile_enm.POINTS.PHYSICAL.value
-            return [level, coins]
+            points = points_by_difucalyti + profile_enm.POINTS.PHYSICAL.value
+            return [points, coins]

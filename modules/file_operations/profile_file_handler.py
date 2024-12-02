@@ -33,15 +33,15 @@ class ProfileFileHandler:
             new_profile = build_profile("First name", "Last name")
             self.save_in_file(new_profile)
 
-    def update_profile_category_level_and_coins_in_file(self, task: Task, level: int, coins: int) -> None:
+    def update_profile_category_points_and_coins_in_file(self, task: Task, points: int, coins: int) -> None:
         self.check_does_profile_data_exist()
         match task[task_enm.FIELD.CATEGORY.value]:
             case task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_LIFESTYLE.value, None, level)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_LIFESTYLE.value, None, points)
             case task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_SMART.value, None, level)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_SMART.value, None, points)
             case task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value:
-                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_PHYSICAL.value, None, level)
+                self.update_profile_in_file(profile_enm.ACTION_TYPE.UPDATE_PHYSICAL.value, None, points)
         self.update_profile_in_file(profile_enm.ACTION_TYPE.ADD_COINS.value, None, coins)
 
     def update_profile_in_file(self, action_type: str, update_profile: list[Profile] | None = None, total_count: int | None = None) -> bool:

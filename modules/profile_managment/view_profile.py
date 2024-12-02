@@ -26,11 +26,11 @@ class ProfileView:
         level_smart = profile_enm.FIELD.SMART.value
         level_lifestyle = profile_enm.FIELD.LIFESTYLE.value
         for profile in self.profile_info:
-            profile[level_physical] = self.calculate_level(profile, profile_enm.FIELD.PHYSICAL.value)
-            profile[level_smart] = self.calculate_level(profile, profile_enm.FIELD.SMART.value)
-            profile[level_lifestyle] = self.calculate_level(profile, profile_enm.FIELD.LIFESTYLE.value)
+            profile[level_physical] = self.convert_points_to_level(profile, profile_enm.FIELD.PHYSICAL.value)
+            profile[level_smart] = self.convert_points_to_level(profile, profile_enm.FIELD.SMART.value)
+            profile[level_lifestyle] = self.convert_points_to_level(profile, profile_enm.FIELD.LIFESTYLE.value)
 
-    def calculate_level(self, profile: Profile, field) -> str:
+    def convert_points_to_level(self, profile: Profile, field) -> str:
         raw_score = int(profile.get(field))
         scaling_factor: int = 100
         level = raw_score // scaling_factor
