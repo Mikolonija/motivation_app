@@ -258,7 +258,7 @@ pytest test_helpers.py
 
    ![create_first_name](images/manage_profile/create_first_name.png)
 
-3. Enter your first name.
+3. Enter your last name.
 
    ![create_last_name](images/manage_profile/create_last_name.png)
 

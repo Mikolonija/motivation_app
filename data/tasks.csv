@@ -1,4 +1,5 @@
 ID,DESCRIPTION,DEADLINE,STATUS,CATEGORY,DIFFICULTY
-1,Clean house,2024-12-03,2,1,1
-2,read book,2024-12-03,2,2,2
-3,learn python language,2024-12-04,2,3,3
+1,Learn python if conditions language,2024-12-03,2,1,2
+2,Learn python language,2024-12-02,3,3,3
+3,go to gym,2024-12-02,2,1,1
+4,Learn,2024-12-03,2,2,1
