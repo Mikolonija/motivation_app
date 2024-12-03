@@ -31,7 +31,7 @@ class AddTask:
                 task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value,
             ]:
                 msg_output(
-                    f"Error: Please enter a valid choice. Use {task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value} to create an EVERYDAY_ESSENTIALS task, {task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value} to create a GROWTH_LEARNING task, {task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value} to create a HEALTH_FITNESS task, or {menu_enm.MENU_ACTION.BACK.value} to return to task mode selection. Please try again."
+                    f"Error: Please enter a valid choice. Use {task_enm.CATEGORY_TYPE.EVERYDAY_ESSENTIALS.value} to create an EVERYDAY_ESSENTIALS task, {task_enm.CATEGORY_TYPE.GROWTH_LEARNING.value} to create a GROWTH_LEARNING task, {task_enm.CATEGORY_TYPE.HEALTH_FITNESS.value} to create a HEALTH_FITNESS task. Please try again."
                 )
                 continue
             return cls(choice)
